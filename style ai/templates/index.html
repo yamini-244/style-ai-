@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StyleAI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>StyleAI – AI Fashion Stylist</h1>
+
+        <form id="uploadForm">
+            <input type="file" id="image" name="image" accept="image/*" required>
+            
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select>
+
+            <button type="submit">Analyze</button>
+        </form>
+
+        <div id="loading" class="hidden">Analyzing...</div>
+
+        <div id="results" class="hidden">
+            <h2>Results</h2>
+            <p><strong>Skin Tone:</strong> <span id="tone"></span></p>
+            <p><strong>RGB:</strong> <span id="rgb"></span></p>
+            <h3>AI Recommendations:</h3>
+            <pre id="recommendation"></pre>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
